@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-dotnet-example
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: kubernetes-dotnet-example
+        image: cdemi/kubernetes-dotnet-example:latest
+        ports:
+        - containerPort: 80

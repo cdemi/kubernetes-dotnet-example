@@ -7,7 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "src\WebAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DCC613AA-08A9-4CB7-AB1A-2C98BA6718B4}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{0E43731B-DD9D-4448-8174-51478C6C8EF0}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\deployment.yaml = k8s\deployment.yaml
+		k8s\service.yaml = k8s\service.yaml
 	EndProjectSection
 EndProject
 Global
@@ -23,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E43731B-DD9D-4448-8174-51478C6C8EF0} = {DCC613AA-08A9-4CB7-AB1A-2C98BA6718B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1438D766-477B-4ABE-88F3-F1C680621B6D}
