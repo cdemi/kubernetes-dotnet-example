@@ -1,10 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-dotnet-example
+  name: kubernetes-dotnet-example-deployment
+  labels:
+    app: kubernetes-dotnet-example
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: kubernetes-dotnet-example
   template:
+    metadata:
+      labels:
+        app: kubernetes-dotnet-example
     spec:
       containers:
       - name: kubernetes-dotnet-example
