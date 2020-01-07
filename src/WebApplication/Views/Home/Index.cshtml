@@ -6,4 +6,9 @@
     <h1 class="display-4">Welcome to Kubernetes .NET Core Example</h1>
     <p>Visit <a href="https://github.com/cdemi/kubernetes-dotnet-example">GitHub/cdemi/kubernetes-dotnet-example</a> for the source code.</p>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <h2>Host Details</h2>
+    <p>Hostname: <strong>@(System.Net.Dns.GetHostName())</strong><br/>
+    IP Addresses: <strong>@String.Join(", ", System.Net.Dns.GetHostAddresses(System.Net.Dns.GetHostName()).Select(ip=>ip.ToString()))</strong>
+    </p>
 </div>
