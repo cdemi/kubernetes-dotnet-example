@@ -2,7 +2,7 @@
 
 ## Building the image
 ```
-docker build . -t     app: webapp
+docker build . -t cdemi/kubernetes-dotnet-example:latest
 ```
 
 ## Deploying Deployment on Kubernetes
