@@ -20,5 +20,11 @@ spec:
       containers:
       - name: kubernetes-dotnet-example
         image: cdemi/kubernetes-dotnet-example:latest
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 3
         ports:
         - containerPort: 80
