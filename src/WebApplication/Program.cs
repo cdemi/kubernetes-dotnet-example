@@ -33,7 +33,7 @@ namespace WebApplication
                     }
                     else
                     {
-                        config.WriteTo.Console(new ElasticsearchJsonFormatter());
+                        //config.WriteTo.Console(new ElasticsearchJsonFormatter());
                     }
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
