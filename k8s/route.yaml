@@ -2,6 +2,9 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: kubernetes-dotnet-example-route
+  annotations:
+    haproxy.router.openshift.io/balance: roundrobin
+    haproxy.router.openshift.io/disable_cookies: 'true'
 spec:
   to:
     kind: Service
