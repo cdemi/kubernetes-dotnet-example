@@ -1,0 +1,11 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: kubernetes-dotnet-example-route
+spec:
+  to:
+    kind: Service
+    name: kubernetes-dotnet-example-service
+  port:
+    targetPort: 8069
+  wildcardPolicy: None

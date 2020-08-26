@@ -23,8 +23,12 @@ spec:
         livenessProbe:
           httpGet:
             path: /health
-            port: 80
+            port: 8069
+            scheme: HTTP
           initialDelaySeconds: 3
           periodSeconds: 3
+        env:
+          - name: ASPNETCORE_URLS
+            value: 'http://*:8069'
         ports:
-        - containerPort: 80
+          - containerPort: 8069

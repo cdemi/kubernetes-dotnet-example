@@ -4,7 +4,7 @@ metadata:
   name: kubernetes-dotnet-example-service
 spec:
   ports:
-  - port: 80
+  - port: 8069
   selector:
     app: kubernetes-dotnet-example
     environment: production
