@@ -20,13 +20,13 @@ spec:
       containers:
       - name: kubernetes-dotnet-example
         image: cdemi/kubernetes-dotnet-example:latest
-        livenessProbe:
+        readinessProbe:
           httpGet:
             path: /health
             port: 8069
             scheme: HTTP
-          initialDelaySeconds: 3
-          periodSeconds: 3
+          periodSeconds: 1
+          failureThreshold: 1
         env:
           - name: ASPNETCORE_URLS
             value: 'http://*:8069'
